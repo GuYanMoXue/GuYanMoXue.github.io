@@ -1,8 +1,8 @@
-name: "Pianfan's blog"
+name: "blog"
 description: "孤雁末学"
 
-avatar: https://pianfan.github.io/images/avatar.jpg
-favicon: https://pianfan.github.io/images/favicon.ico
+avatar: 
+favicon: 
 
 navigation:
   - name: 首页
@@ -18,10 +18,10 @@ excerpt_separator: <!-- more -->
 
 footer-links:
   zhihu: 
-  email: xiongyunhan@outlook.com
+  email: tpk20040804@outlook.com
   facebook:
-  github: pianfan
-  rss: # just type anything here for a working RSS icon
+  github: 
+  rss: # 
   twitter: 
   youtube:
 

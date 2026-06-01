@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   var bootScreen = document.getElementById('boot-screen');
+  var pageWrapper = document.getElementById('page-wrapper');
+  var bootPlayed = localStorage.getItem('boot-played');
 
-  if (bootScreen) {
+  if (bootScreen && !bootPlayed) {
     var bootLines = bootScreen.querySelectorAll('.boot-line');
     bootLines.forEach(function (line) {
       var delay = parseInt(line.getAttribute('data-delay'), 10);
@@ -14,13 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
       bootScreen.classList.add('fade-out');
       setTimeout(function () {
         bootScreen.style.display = 'none';
-        var pageWrapper = document.getElementById('page-wrapper');
         pageWrapper.classList.remove('hidden');
         pageWrapper.classList.add('page-enter');
+        localStorage.setItem('boot-played', '1');
         animateElements();
       }, 400);
     }, 2400);
   } else {
+    if (bootScreen) bootScreen.style.display = 'none';
+    if (pageWrapper) pageWrapper.classList.remove('hidden');
     animateElements();
   }
 });

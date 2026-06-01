@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function animateElements() {
   var selectors = [
     '.site-header',
+    '.profile-sidebar',
     '.search-container',
     '.post-list-header',
     '.post-card',
@@ -40,7 +41,8 @@ function animateElements() {
     '.archives',
     '.taxonomy-page',
     '.taxonomy-term',
-    '.about-content'
+    '.about-content',
+    '.skills-page'
   ];
   var elements = document.querySelectorAll(selectors.join(','));
   elements.forEach(function (el, i) {

@@ -1,25 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const bootScreen = document.getElementById('boot-screen');
-  const pageWrapper = document.getElementById('page-wrapper');
-  const bootLines = bootScreen.querySelectorAll('.boot-line');
+  var bootScreen = document.getElementById('boot-screen');
 
-  bootLines.forEach(function (line) {
-    var delay = parseInt(line.getAttribute('data-delay'), 10);
-    setTimeout(function () {
-      line.classList.add('visible');
-    }, delay);
-  });
+  if (bootScreen) {
+    var bootLines = bootScreen.querySelectorAll('.boot-line');
+    bootLines.forEach(function (line) {
+      var delay = parseInt(line.getAttribute('data-delay'), 10);
+      setTimeout(function () {
+        line.classList.add('visible');
+      }, delay);
+    });
 
-  var totalTime = 2400;
-  setTimeout(function () {
-    bootScreen.classList.add('fade-out');
     setTimeout(function () {
-      bootScreen.style.display = 'none';
-      pageWrapper.classList.remove('hidden');
-      pageWrapper.classList.add('page-enter');
-      animateElements();
-    }, 400);
-  }, totalTime);
+      bootScreen.classList.add('fade-out');
+      setTimeout(function () {
+        bootScreen.style.display = 'none';
+        var pageWrapper = document.getElementById('page-wrapper');
+        pageWrapper.classList.remove('hidden');
+        pageWrapper.classList.add('page-enter');
+        animateElements();
+      }, 400);
+    }, 2400);
+  } else {
+    animateElements();
+  }
 });
 
 function animateElements() {

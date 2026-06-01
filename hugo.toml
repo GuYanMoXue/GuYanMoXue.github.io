@@ -1,0 +1,62 @@
+baseURL = "https://guyanmoxue.github.io/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+title = "孤雁末学"
+theme = ""
+paginate = 8
+enableRobotsTXT = true
+enableEmoji = true
+
+[params]
+  author = "孤雁末学"
+  description = "孤雁末学的个人博客"
+  keywords = "blog,技术,编程"
+  avatar = ""
+  favicon = ""
+  dateFormat = "2006-01-02"
+  footerText = "Copyright (c) 2024 孤雁末学"
+
+[params.social]
+  email = "tpk20040804@outlook.com"
+  github = "GuYanMoXue"
+  zhihu = ""
+
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "归档"
+  url = "/archives/"
+  weight = 2
+
+[[menu.main]]
+  name = "标签"
+  url = "/tags/"
+  weight = 3
+
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true

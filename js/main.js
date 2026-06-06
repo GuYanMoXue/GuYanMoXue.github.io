@@ -31,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function animateElements() {
   var selectors = [
-    '.site-header',
-    '.welcome-section',
     '.profile-sidebar',
     '.search-container',
     '.post-list-header',

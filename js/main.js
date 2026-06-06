@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         pageWrapper.classList.add('page-enter');
         localStorage.setItem('boot-played', '1');
         animateElements();
-      }, 400);
+      }, 500);
     }, 2400);
   } else {
     if (bootScreen) bootScreen.style.display = 'none';
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function animateElements() {
   var selectors = [
     '.site-header',
+    '.welcome-section',
     '.profile-sidebar',
     '.search-container',
     '.post-list-header',
@@ -47,11 +48,11 @@ function animateElements() {
   var elements = document.querySelectorAll(selectors.join(','));
   elements.forEach(function (el, i) {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(18px)';
+    el.style.transform = 'translateY(16px)';
     setTimeout(function () {
-      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
       el.style.opacity = '1';
       el.style.transform = 'translateY(0)';
-    }, 60 * i);
+    }, 50 * i);
   });
 }

@@ -197,7 +197,7 @@ a:hover {
 /* ============ Main ============ */
 main.container {
   min-height: 50vh;
-  padding-top: 32px;
+  padding-top: clamp(100px, 10vw, 180px);
   padding-bottom: 120px;
 }
 

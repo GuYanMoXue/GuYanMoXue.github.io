@@ -962,7 +962,7 @@ main.container {
 
 /* ============ Responsive ============ */
 @media (max-width: 1024px) {
-  .svg-header, .svg-footer, .svg-left, .svg-right {
+  .svg-left, .svg-right {
     display: none;
   }
 
@@ -975,6 +975,7 @@ main.container {
     justify-content: center;
     gap: 0;
     padding: 0;
+    margin-top: clamp(36px, 4.74vw, 91px);
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-color);
     width: 100%;

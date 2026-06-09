@@ -961,7 +961,7 @@ main.container {
 }
 
 /* ============ Responsive ============ */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .svg-header, .svg-footer, .svg-left, .svg-right {
     display: none;
   }
